@@ -10,11 +10,14 @@ export default class Quote {
 
   get QuoteTemplate() {
     return/*html*/`
-
-<h6 class="text-light">
- ${this.body} 
-</h6>
-<h4 class="text-light">-${this.author}</h4>
+<blockquote class="blockquote">
+<p class="text-light">
+${this.body} 
+</p>
+<footer class="blockquote-footer">
+<p class="text-light">-${this.author}</p>
+</footer>
+</blockquote>
 
 `
   }

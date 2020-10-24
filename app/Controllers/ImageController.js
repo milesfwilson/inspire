@@ -11,7 +11,14 @@ function _drawImage() {
 
 function _drawClock() {
   let date = new Date()
-  document.getElementById('clock').innerHTML = date.getHours() + ' : ' + date.getMinutes()
+
+  if (date.getMinutes() >= 10) {
+    document.getElementById('clock').innerHTML = date.getHours() + ' : ' + date.getMinutes()
+  } else {
+    document.getElementById('clock').innerHTML = date.getHours() + ' : ' + '0' + date.getMinutes()
+
+  }
+
   if (date.getHours() <= 12) {
     document.getElementById('timeOfDay').innerText = "Good morning!"
   } else if (date.getHours() > 12 && date.getHours() <= 16) {
@@ -29,6 +36,7 @@ export default class ImageController {
     ProxyState.on("image", _drawImage)
     this.getImage()
     _drawClock()
+    setInterval(_drawClock, 1000)
   }
 
   getImage() {

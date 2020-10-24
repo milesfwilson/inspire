@@ -28,7 +28,7 @@ export default class Weather {
 </div>
 <div class="col-6 d-flex flex-column justify-content-center">
 <div class="p-2">
-<h4>${this.convert()}&deg;</h4>
+<h3>${this.convert()}&deg;</h3>
 <p>
 ${this.city}
 </p>

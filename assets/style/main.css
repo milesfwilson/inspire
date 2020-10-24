@@ -23,11 +23,11 @@ border-radius: 25px;
 }
 
 .big {
-  font-size: 180px;
+  font-size: 100px;
 }
 
-.height {
-  height: 80vh;
+.p-c {
+margin: 15%;
 }
 
 :root {

@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="assets/style/main.css">
     <title>Inspire</title>
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid vh-100">
     <header class="row bg-dark text-light">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <h1 class="text-light text-center">Inspire</h1>
+        <div class="col-4 d-flex flex-column justify-content-center">
+            <h1 class="text-light">Inspire</h1>
+
+        </div>
+        <div class="col-4 d-flex flex-column justify-content-center">
         </div>
         <div class="col-4 d-flex justify-content-end" id="weather">
 
@@ -29,9 +32,9 @@
 
 
 
-        <div class="row height">
-            <div class="col-3"></div>
-            <div class="col-6 d-flex flex-column justify-content-center">
+        <div class="row h-100">
+            <div class="col-4"></div>
+            <div class="col-4 d-flex flex-column justify-content-center">
 
                 <div class="text-center">
                     <h1 class="stroke text-light big" id="clock">3:04</h1>
@@ -39,27 +42,66 @@
                 </div>
             </div>
 
-            <div class="col-3 d-flex flex-column justify-content-end">
-                <div class="shadow-lg radius-25 bg-dark text-light p-2 m-5">
-                    <h4 class="text-center">To-do List</h4>
-                    <form onsubmit="app.todoController.addTodo(event)">
-
-                        <div class="form-group row">
-                            <div class="col-9">
-
-                                <input type="text" name="description" id="" class="form-control" placeholder="Add Item"
-                                    aria-describedby="helpId">
-                            </div>
-
-                            <div class="col">
-
-                                <button type="submit" class="btn border-light text-light bg-transparent">+</button>
-                            </div>
+            <div class="col-4 d-flex flex-column justify-content-end">
+                <div class="shadow-lg radius-25 bg-dark text-light p-1 m-3">
+                    <div class="row">
+                        <div class="col-3 d-flex">
+                            <p>
+                                <a class="btn bg-transparent border-0 text-light" data-toggle="collapse"
+                                    href="#contentId" aria-expanded="false" aria-controls="contentId">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                            <p>
+                                <a class="btn text-light border-0 bg-transparent" data-toggle="collapse"
+                                    href="#todosCollapse" aria-expanded="false" aria-controls="contentId">
+                                    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                                </a>
+                            </p>
                         </div>
-                    </form>
-                    <div class="col-12" id="todos">
-
+                        <div class="col-6">
+                            <h4 class="text-center">To-do</h4>
+                        </div>
+                        <div class="col-3"></div>
                     </div>
+
+
+
+
+
+                    <div class="collapse" id="contentId">
+
+
+                        <form onsubmit="app.todoController.addTodo(event)">
+
+                            <div class="form-group row">
+                                <div class="col-1"></div>
+                                <div class="col-10 d-flex justify-content-center">
+
+                                    <input type="text" name="description" id="" class="radius-25 w-100 p-2 border-0"
+                                        placeholder="Add Item" aria-describedby="helpId">
+                                    <button type="submit"
+                                        class="btn border-light text-light bg-transparent ml-2">+</button>
+                                </div>
+
+                                <div class="col-1">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+
+
+
+                    <div class="collapse" id="todosCollapse">
+                        <div class="col-12" id="todos">
+
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
