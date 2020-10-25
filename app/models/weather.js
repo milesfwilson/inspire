@@ -22,19 +22,22 @@ export default class Weather {
 
   get WeatherTemplate() {
     return/*html*/`
-<div class="row">
-<div class="col-6 d-flex flex-column justify-content-center">
-<img class="bw" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+
+<div class="mr-1">
+<div class="d-flex">
+<img class="bw img-fluid my-auto" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+<h4 class="my-auto">${this.convert()}&deg;</h4>
 </div>
-<div class="col-6 d-flex flex-column justify-content-center">
-<div class="p-2">
-<h3>${this.convert()}&deg;</h3>
-<p>
+<h6 class="text-center">
 ${this.city}
-</p>
+</h6>
+
 </div>
-</div>
-</div>
+
+
+
+
+
 
 `
   }

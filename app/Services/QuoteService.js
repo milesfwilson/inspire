@@ -11,6 +11,7 @@ class QuoteService {
     this.getQuote()
   }
 
+
   async getQuote() {
     let res = await api.get('quotes')
     ProxyState.quote = new Quote(res.data.quote)

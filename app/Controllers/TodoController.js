@@ -7,12 +7,22 @@ function _drawTodos() {
   ProxyState.todos.forEach(t => template += t.Template)
   document.getElementById('todos').innerHTML = template
 }
+function _drawRemaining() {
+  let remaining = 0
+  ProxyState.todos.forEach(t => {
+    if (!t.completed) {
+      remaining++
+    }
+  })
+  document.getElementById('remaining').innerText = ` ${remaining} remaining.`
+}
 
 export default class TodoController {
   constructor() {
     //TODO Remember to register your subscribers
     todoService.getTodos()
     ProxyState.on("todos", _drawTodos)
+    ProxyState.on("todos", _drawRemaining)
   }
 
   getTodos() {

@@ -16,6 +16,14 @@ export default class QuoteController {
     ProxyState.on("quote", _drawQuote)
   }
 
+  changeQuote() {
+    document.getElementById('quoteText').innerHTML = ProxyState.quote.AuthorTemplate
+  }
+
+  changeBack() {
+    document.getElementById('quote').innerHTML = ProxyState.quote.QuoteTemplate
+  }
+
   getQuote() {
     try {
       quoteService.getQuote()

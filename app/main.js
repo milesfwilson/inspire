@@ -11,7 +11,7 @@ class App {
     this.weatherController = new WeatherController();
     this.todoController = new TodoController();
     this.quoteController = new QuoteController()
-    this.imageControler = new ImageController()
+    this.imageController = new ImageController()
   }
 }
 

@@ -1,3 +1,5 @@
+
+
 export default class Quote {
 
   constructor(data) {
@@ -8,18 +10,35 @@ export default class Quote {
 
 
 
+
+
   get QuoteTemplate() {
     return/*html*/`
+    <div id="quoteText">
+    <blockquote class="blockquote">
+    <p class="text-light grow" onclick="app.quoteController.changeQuote()">
+    
+    ${this.body} 
+    
+    </p>
+    </blockquote>
+    </div>
+`
+  }
+
+
+  get AuthorTemplate() {
+    return/*html*/`
 <blockquote class="blockquote">
-<p class="text-light">
-${this.body} 
+<p class="text-light grow" onclick="app.quoteController.changeBack()">
+
+${this.author} 
+
 </p>
-<footer class="blockquote-footer">
-<p class="text-light">-${this.author}</p>
-</footer>
 </blockquote>
 
 `
+
   }
 
 }
