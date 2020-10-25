@@ -17,9 +17,12 @@
 
 <body class="container-fluid vh-100">
     <header class="row theme-dark collapse" id="header">
-        <div class="col-4 d-flex flex-column justify-content-center">
-            <h1 class="">Inspire</h1>
+        <div class="col-4 d-flex">
+            <button class="btn border-0 bg-transparent text-light ml-2 grow" onclick="app.imageController.color()">
 
+                <i class="fa fa-adjust fa-2x" aria-hidden="true"></i>
+            </button>
+            <h1 class="my-auto">Inspire</h1>
         </div>
         <div class="col-4 d-flex flex-column justify-content-center">
         </div>
@@ -58,7 +61,7 @@
             <div class="col-4 d-flex flex-column justify-content-end">
                 <div class="shadow-lg radius-25 theme-dark p-1 m-3 grow" id="lister">
                     <div class="row">
-                        <div class="col-3 d-flex">
+                        <div class="col-12 d-flex">
                             <p>
                                 <a class="btn bg-transparent border-0 text-light" data-toggle="collapse"
                                     href="#contentId" aria-expanded="false" aria-controls="contentId">
@@ -75,19 +78,16 @@
 
                             <p>
 
-                                <a class="btn border-0 bg-transparent text-light" onclick="app.imageController.color()">
+                                <button class="btn border-0 bg-transparent text-light"
+                                    onclick="app.imageController.color()">
 
                                     <i class="fa fa-adjust" aria-hidden="true"></i>
+                                </button>
                                 </a>
 
                             </p>
                         </div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <h4 class="text-center"></h4>
-                        </div>
-                        <div class="col-3 d-flex justify-content-end">
 
-                        </div>
                     </div>
 
 
