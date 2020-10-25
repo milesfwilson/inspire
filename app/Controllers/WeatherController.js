@@ -1,5 +1,5 @@
-import { ProxyState } from "../AppState.js";
-import weatherService from "../Services/WeatherService.js";
+import { ProxyState } from "../AppState.js"
+import weatherService from "../Services/WeatherService.js"
 
 //NOTE The weather service and controller are mostly done,
 //		you may wish to check out the model and include some additional data.
